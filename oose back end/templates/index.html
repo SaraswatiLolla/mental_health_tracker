@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>MENTAL HEALTH TRACKER</title>
+    <style>
+   ul{
+    font-size:large;
+   }
+        </style>
+</head>
+
+<body background="https://tse4.mm.bing.net/th?id=OIP.xcmk8zstnu61ICisO7JKNQHaEK&pid=Api&P=0" style="background-position: center; background-repeat: no-repeat;background-size: cover;color: white;">
+<h1 style="text-align: center; color:white;"><b>ANSWER ME</b></h1>
+<form action="{{ url_for('predict')}}"method="post">
+<Ul Class="quiz">
+    <Li>
+        <H4>Little interset in doing things</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label></Label>
+                    <Input Type="Radio" Name="Question0" Value="A" required="Required" >
+                    <Span>yes </Span>
+                </Label>
+            </Li>
+            <Li>
+                <Label>
+                    <Input Type="Radio" Name="Question0" Value="B" required="Required">
+                    <Span>no</Span>
+                </Label>
+            </Li>
+        </Ul>
+    </Li>
+    <Li>
+        <H4>Trouble falling or staying asleep,or sleeping too much</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label>
+                    <Input Type="Radio" Name="Question1" Value="A" required="Required">
+                    <Span>yes</Span>
+                </Label>
+            </Li>
+            <Li>
+                <Label>
+                    <Input Type="Radio" Name="Question1" Value="B" required="Required">
+                    <Span>no</Span>
+                </Label>
+            </Li>
+        </Ul>
+    </Li>
+    <Li>
+        <H4>Feeling tired or having little energy</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question2" Value="A" required="Required"><Span
+                        >yes</Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question2" Value="B" required="Required"><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+
+        </Ul>
+    </Li>
+    <Li>
+        <H4>feeling bad about yourself-or that you are a failure or have let yourself or your family down</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label>
+                    <Input Type="Radio" Name="Question3" Value="A" required="Required">
+                    <Span>yes</Span>
+                </Label>
+            </Li>
+            <Li>
+                <Label>
+                    <Input Type="Radio" Name="Question3" Value="B" required="Required">
+                    <Span>no</Span>
+                    </Label>
+            </Li>
+        </Ul>
+    </Li>
+    <Li>
+        <H4>Thougths that you would be better off dead ,or of hurting yourself</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question4" Value="A" required="Required"><Span
+
+                        > yes</Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question4" Value="B" required="Required"><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+
+        </Ul>
+    </Li>
+    <Li>
+        <H4>aches and pains with seemingly no direct cause? </H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question5" Value="A" required="Required"><Span
+                        >yes </Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question5" Value="B" required="Required"><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+
+        </Ul>
+    </Li>
+    <Li>
+        <H4>Worrying too much about different things</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question6" Value="A" required="Required" ><Span
+                        >yes </Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question6" Value="B" required="Required"><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+
+        </Ul>
+    </Li>
+    <Li>
+        <H4>Trouble relaxing</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question7" Value="A" required="Required"><Span
+                        >yes</Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question7" Value="B" required="Required"><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+        </Ul>
+    <Li>
+        <H4>Becoming easily annoyed or irritable</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question8" Value="A" required="Required"><Span
+                        >yes </Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question8" Value="B" required="Required" ><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+
+        </Ul>
+    </Li>
+    <Li>
+        <H4>Feeling afraid,as if something awful might happen</H4>
+        <Ul Class="Choices">
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question9" Value="A" required="Required"><Span
+                        >yes </Span
+                    ></Label
+                >
+            </Li>
+            <Li>
+                <Label
+                    ><Input Type="Radio" Name="Question9" Value="B" required="Required"><Span
+                        >no</Span
+                    ></Label
+                >
+            </Li>
+        </Ul>
+    </Li>
+</Ul>
+<Button Class="View-Results" Onclick="ReturnScore()">View Results</Button>
+<input type="reset">
+</form>
+</body>
+
+</html>
