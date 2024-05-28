@@ -13,11 +13,10 @@ def home():
     return render_template('login.html')
 
 
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form['username']
-    email = request.form['email']
-    password = request.form['password']
+@app.route('/Next', methods=['POST'])
+def Next():
+    next_ = request.form['Next']
+    
 
     return render_template('index.html')
 
@@ -37,7 +36,6 @@ def predict():
 
     input = [str(x) for x in request.form.values()]
     df_1 = pd.DataFrame(input)
-    print(df_1)
     x = df_1[0].map(my_dict)
     df_test = x.to_frame().T
     dep = Gbr.predict(df_test)
